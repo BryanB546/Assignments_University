@@ -1,0 +1,13 @@
+Part 2:
+1: Select * from customers where email is Null or email like ‘%fiu%’;
+2: Select name, count(orders.id) from Customers inner join Orders on customers.id = orders.customer_id where customers.name like 'J%';
+3: Insert into Products values (1,'apples',3.00);
+4: create table Order_products( id serial primary key,quantity int Not Null Default 0, foreign key (order_id) references Orders.id on delete restrict, Foreign key(product_id) references Products.id on delete restrict);
+5: Select avg(price) from Products;
+6: Select name, Order_Product.quantity from Categories inner join Products on Products.category_id = Categories.id inner join Order_Product on Order_Product.product_id = Products.id;
+7:Select Sum(price * quantity) as sale_amount from Products Inner Join Order_Product on Order_Product.product_id = Products.id;
+8: Select name, Sum(price * quantity) as total_num_amount from Products Inner Join Order_Product on Order_Product.product_id = Products.id;
+9:Select id,Sum(price * quantity) as total_amount from Orders Inner Join Order_Product on Orders.id = Order_Product.order_id Inner Join Products on Order_Product.product_id = Products.id;
+10:
+
+
